@@ -195,15 +195,17 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p></p><h3 id="HTML是什么？">HTML是什么？（MDN）</h3><br>HTML (HyperText Markup Language) 不是一种编程语言;它是一种标记语言，用于告诉您的浏览器如何构造您访问的网页。<br>它可以像Web开发人员希望的那样复杂或简单。 HTML由一系列的 elements组成, 您可以使用它来封装，包装或标记内容的不<br>同部分，使其以某种方式显示，或以某种方式执行。封闭tags 可以使一点内容成为超链接以链接到Web上的另一页面，斜体字<br>等等。<p></p>
-<p></p><h3 id="在HTML中包含特殊字符">在HTML中包含特殊字符</h3><br>在HTML中，字符\&lt;, >,”,’ 和 &amp; 是特殊字符. 它们是HTML语法自身的一部分, 那么你如何将这些字符包含进你的文本中呢,<br>比如说如果你真的想要在文本中使用符号&amp;或者小于号, 而不想让它们被浏览器视为代码并被解释?<br>我们必须使用字符引用 —— 表示字符的特殊编码, 它们可以在那些情况下使用. 每个字符引用以符号&amp;开始, 以分号(;)结束.<br>Literal character    Character reference equivalent<br>&lt;                    \&lt;<p></p>
+        <p></p><h3 id="HTML是什么？">HTML是什么？（MDN）</h3><br>HTML (HyperText Markup Language) 不是一种编程语言;它是一种标记语言，用于告诉您的浏览器如何构造您访问的网页。它可以像Web开发人员希望的那样复杂或简单。 HTML由一系列的 elements组成, 您可以使用它来封装，包装或标记内容的不同部分，使其以某种方式显示，或以某种方式执行。封闭tags 可以使一点内容成为超链接以链接到Web上的另一页面，斜体字等等。<p></p>
+<p></p><h3 id="在HTML中包含特殊字符">在HTML中包含特殊字符</h3><br>在HTML中，字符<code>&lt;, &gt;,”,’ 和 &amp; </code>是特殊字符. 它们是HTML语法自身的一部分, 那么你如何将这些字符包含进你的文本中呢,比如说如果你真的想要在文本中使用符号&amp;或者小于号, 而不想让它们被浏览器视为代码并被解释?我们必须使用字符引用 —— 表示字符的特殊编码, 它们可以在那些情况下使用. 每个字符引用以符号&amp;开始, 以分号(;)结束.<p></p>
+<p><pre>Literal character    Character reference equivalent<br>&lt;                    &lt;</pre></p>
 <blockquote>
-<pre><code>\&amp;gt;
-</code></pre><p>“                    \&quot;<br>‘                    \&apos;<br>&amp;                    \&amp;</p>
+<pre><code>&amp;gt;
+</code></pre><p>“                    &quot;<br>‘                    &apos;<br>&amp;                    &amp;<br></p>
+<p></p><h3 id="MDN-空元素">MDN-空元素</h3><br>一个空元素（empty element）可能是 HTML，SVG，或者 MathML 里的一个不可能存在子节点（例如内嵌的元素或者元素内的文本）的element。HTML，SVG 和 MathML 的规范都详细定义了每个元素能包含的具体内容（define very precisely what each element can contain）。许多组合是没有任何语义含义的，比如一个 <code><audio></audio></code> 元素嵌套在一个<code> <hr> </code>元素里。在 HTML 中，通常在一个空元素上使用一个闭标签是无效的。例如， <code><input type="text"></code> 的闭标签是无效的HTML。<br>在 HTML 中有以下这些空元素：<p></p>
+<p><pre><br>1、<area><br>2、<base><br>3、<br><br>4、<col><br>5、<colgroup> when the span is present<br>6、<command><br>7、<embed><br>8、<hr><br>9、<img><br>10、<input><br>11、<keygen><br>12、<link><br>13、<meta><br>14、<param><br>15、<source><br>16、<track><br>17、<wbr><br></colgroup></pre><br>Note: 在极少数情况下，空元素被错误地称为“无效元素”(void elements)。</p>
+<p></p><h3 id="MDN-替换元素">MDN-替换元素</h3><br> CSS 里，可替换元素（replaced element）的展现不是由CSS来控制的。这些元素是一类 外观渲染独立于CSS的 外部对象。典型的可替换元素有 <code><img>、 <object>、 <video></video></object></code> 和 表单元素，如<code><textarea>、 </textarea><input></code> 。某些元素只在一些特殊情况下表现为可替换元素，例如 <code><audio>、<canvas> </canvas></audio></code>。通过 CSS content 属性来插入的对象 被称作匿名可替换元素（anonymous replaced elements）。CSS在某些情况下会对可替换元素做特殊处理，比如计算外边距和一些auto值。需要注意的是，一部分（并非全部）可替换元素，本身具有尺寸和基线（baseline），会被像vertical-align之类的一些CSS 属性用到。<p></p>
 </blockquote>
-<p></p><h3 id="MDN-空元素">MDN-空元素</h3><br> 一个空元素（empty element）可能是 HTML，SVG，或者 MathML 里的一个不可能存在子节点（例如内嵌的元素或者元素内的文本）的element。<br> HTML，SVG 和 MathML 的规范都详细定义了每个元素能包含的具体内容（define very precisely what each element can contain）。<br> 许多组合是没有任何语义含义的，比如一个 \<audio\> 元素嵌套在一个 \<hr\> 元素里。<br>在 HTML 中，通常在一个空元素上使用一个闭标签是无效的。例如， \<input type="text" \="">\&lt;\/input> 的闭标签是无效的HTML。<br>\<pre\>在 HTML 中有以下这些空元素：<br>1、\<area\><br>2、\<base\><br>3、\<br\><br>4、\<col\><br>5、\<colgroup\> when the span is present<br>6、\<command\><br>7、\<embed\><br>8、\<hr\><br>9、\<img\><br>10、\<input\><br>11、\<keygen\><br>12、\<link\><br>13、\<meta\><br>14、\<param\><br>15、\<source\><br>16、\<track\><br>17、\<wbr\><br>Note: 在极少数情况下，空元素被错误地称为“无效元素”(void elements)。<br><p></p>
-<p></p><h3 id="MDN-替换元素">MDN-替换元素</h3><br> CSS 里，可替换元素（replaced element）的展现不是由CSS来控制的。这些元素是一类 外观渲染独立于CSS的 外部对象。<br> 典型的可替换元素有 \<img\>、 \<object\>、 \<video\> 和 表单元素，如\<textarea\>、 \<input\> 。<br> 某些元素只在一些特殊情况下表现为可替换元素，例如 <audio> 和 <canvas> 。<br> 通过 CSS content 属性来插入的对象 被称作 匿名可替换元素（anonymous replaced elements）。<br> CSS在某些情况下会对可替换元素做特殊处理，比如计算外边距和一些auto值。<br> 需要注意的是，一部分（并非全部）可替换元素，本身具有尺寸和基线（baseline），会被像vertical-align之类的一些CSS 属性用到。<p></p>
-</canvas></audio></input\></textarea\></video\></object\></img\></wbr\></track\></source\></param\></meta\></link\></keygen\></input\></img\></hr\></embed\></command\></colgroup\></col\></br\></base\></area\></pre\></hr\></audio\>
+
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
@@ -404,10 +406,6 @@
     
     
     
-    
-    
-    
-    
     <div class="total-archive"> Total : 10 </div>
     
     <div class="post-archive">
@@ -425,12 +423,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签6/" >HTML标签6</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签6/" >HTML标签6</a>
         </li>
     
     
