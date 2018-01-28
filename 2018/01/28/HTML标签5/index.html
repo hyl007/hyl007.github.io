@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        Hyl Blog
+        HTML标签5 · Hyl Blog
         
     </title>
     <link rel="icon" href= /assets/888.jpg>
@@ -58,6 +58,8 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
@@ -65,27 +67,65 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Hyl Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">HTML标签5</a>
+            </div>
+    </div>
+    
     <a class="home-link" href=/>Hyl Blog</a>
 </header>
     <div class="wrapper">
         <div class="site-intro">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/777.png)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            HTML标签5
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/01/28</span>
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe604;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">
+                        &#xe601;
+                    </span>
+                    <span class="bdsharebuttonbox">
+                        <a href="#" class="bds_more shareText" data-cmd="more">Share</a>
+                    </span>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -153,38 +193,60 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main index-page">
+            <main class="main post-page">
+    <article class="article-entry">
+        <p></p><h2>一、脚本</h2><br>为了创建动态内容和 Web 应用程序，HTML 支持使用脚本语言，最突出的就是 JavaScript。某些元素支持此功能。<p></p>
+<p>元素：canvas<br>描述：canvas元素可被用来通过脚本（通常是JavaScript）绘制图形。比如,它可以被用来绘制图形,制作图片集合,甚至用来实现动画效果。你可以(也应该)在元素标签内写入可提供替代的的代码内容，这些内容将会在在旧的、不支持canvas元素的浏览器或是禁用了JavaScript的浏览器内渲染并展现。</p>
+<p>元素：noscript<br>描述：如果页面上的脚本类型不受支持或者当前在浏览器中关闭了脚本，则HTML noscript元素定义要插入的html部分。</p>
+<p>元素：script<br>描述：HTML script元素用于嵌入或引用可执行脚本。</p>
+<p></p><h2>二、编辑标识</h2><br>这些元素能标示出某个文本被更改过的部分。<p></p>
+<p>元素：del<br>描述：HTML 删除文字元素del表示已经从文档中删除的文本范围。此元素通常是（但不必）呈现删除线的文本。</p>
+<p>元素：ins<br>描述：HTML ins元素定义已经被插入文档中的文本。</p>
+<p></p><h2>三、表格内容</h2><br>这里的元素用于创建和处理表格数据。元素在一个元素中可以出现一个或者更多。<p></p>
+<p>元素：caption<br>描述：HTML caption 元素 (or HTML 表格标题元素) 展示一个表格的标题， 它常常作为 table的第一个子元素出现，同时显示在表格内容的最前面，但是，它同样可以被CSS样式化，所以，它同样可以出现在任何一个一个相对于表格的做任意位置。</p>
+<p>元素：col<br>描述：HTML col 元素 定义表格中的列，并用于定义所有公共单元格上的公共语义。它通常位于colgroup元素内。</p>
+<p>元素：colgroup<br>描述：HTML 中的 表格列组 colgroup 标签用来定义表中的一组列表。</p>
+<p>元素：table<br>描述：HTML的 table 元素表示表格数据 — 即通过二维数据表表示的信息。</p>
+<p>元素：tr<br>描述：tr 标签定义 HTML 表格中的行。一个 tr 元素包含一个或多个 th 或 td 元素。</p>
+<p>元素：td<br>描述：td 标签定义 HTML 表格中的标准单元格。标准单元格 - 包含数据</p>
+<p>元素：th<br>描述：th 标签定义 HTML 表格中的表头单元格。表头单元格 - 包含头部信息</p>
+<p>元素：tbody<br>描述：tbody 标签用于组合 HTML 表格的主体内容。tbody 元素应该与 thead 和 tfoot 元素结合起来使用，用来规定表格的各个部分（主体、表头、页脚）。通过使用这些元素，使浏览器有能力支持独立于表格表头和表格页脚的表格主体滚动。当包含多个页面的长的表格被打印时，表格的表头和页脚可被打印在包含表格数据的每张页面上。tbody 标签必须被用在以下情境中：作为 table元素的子元素，出现在 caption、colgroup和 thead 元素之后</p>
+<p>元素：tfoot<br>描述：tfoot 标签用于组合 HTML 表格的页脚内容。tfoot元素应该与 thead 和 tbody 元素结合起来使用，用来规定表格的各个部分（页脚、表头、主体）。通过使用这些元素，使浏览器有能力支持独立于表格表头和表格页脚的表格主体滚动。当包含多个页面的长的表格被打印时，表格的表头和页脚可被打印在包含表格数据的每张页面上。tfoot 标签必须被用在以下情境中：作为 table 元素的子元素，出现在 caption、colgroup 和 thead 元素之后，tbody 和 tr 元素之前。</p>
+<p>元素：thead<br>描述：thead标签用于组合 HTML 表格的表头内容。thead元素应该与 tbody&gt;和 tfoot 元素结合起来使用，用来规定表格的各个部分（表头、主体、页脚）。通过使用这些元素，使浏览器有能力支持独立于表格表头和表格页脚的表格主体滚动。当包含多个页面的长的表格被打印时，表格的表头和页脚可被打印在包含表格数据的每张页面上。thead 标签必须被用在以下情境中：作为 table元素的子元素，出现在 caption、colgroup元素之后，tbody、 tfoot 和 tr 元素之前。</p>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+            <li class="next">
+                <a href= "/2018/01/28/HTML标签6/" title= HTML标签6 >
+                    <span>Next Post</span>
+                    <span>HTML标签6</span>
+                </a>
+            </li>
+        
+        
+            <li class="previous">
+                <a href= "/2018/01/28/HTML标签4/" title= HTML标签4 >
+                    <span>Previous Post</span>
+                    <span>HTML标签4</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
     
+    <!--PC版-->
+
+    <!--PC版-->
+
+
     
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/15/重新开始的博客之旅/" >
-                
-                    <span>重新开始的博客之旅</span>
-            </a>
-            <a class="content-show-full" href = "/2018/01/15/重新开始的博客之旅/" >
-                <div class="abstract-content">
-                    
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 我又来一次，我不相信>我又来一次，我不相信</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/15</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -232,6 +294,13 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">一、脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">二、编辑标识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">三、表格内容</span></a></li></ol>
+    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
