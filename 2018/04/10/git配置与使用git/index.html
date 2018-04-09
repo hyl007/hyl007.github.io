@@ -195,7 +195,8 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h1><p>git config –global user.name 你的英文名<br>git config –global user.email 你的邮箱<br>git config –global push.default matching<br>git config –global core.quotepath false<br>git config –global core.editor “vim”<br>使用git,一定要运行这五句话，不然会很坑爹。</p>
+        <h1 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name 你的英文名</span><br><span class="line">git config --global user.email 你的邮箱</span><br><span class="line">git config --global push.default matching</span><br><span class="line">git config --global core.quotepath false</span><br><span class="line">git config --global core.editor &quot;vim&quot;</span><br></pre></td></tr></table></figure>
+<p>使用git,一定要运行这五句话，不然会很坑爹。</p>
 <h1 id="使用git"><a href="#使用git" class="headerlink" title="使用git"></a>使用git</h1><h2 id="初始化和一些git的命令"><a href="#初始化和一些git的命令" class="headerlink" title="初始化和一些git的命令"></a>初始化和一些git的命令</h2><p>1、创建目录作为我们的项目目录：mkdir git-demo-1<br>2、进入目录 cd git-demo-1<br>3、git init，这句命令会在 git-demo-1 里创建一个 .git 目录<br>4、运行 git status -sb 可以看到文件前面有 ?? 号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## Initial commit on master</span><br><span class="line"> ?? css/</span><br><span class="line"> ?? index.html</span><br></pre></td></tr></table></figure></p>
 <p>5、使用 git add 将文件添加到「暂存区」。(<code>git add index.html</code>增加一个index.html的文件添加到「暂存区」。<code>git add .</code>是将所有的文件添加到「暂存区」)<br>6、使用 <code>git commit -m &quot;信息&quot;</code>将你 add 过的内容「正式提交」到本地仓库（.git就是本地仓库），并添加一些注释信息，方便日后查阅<br>7、如果有新的变动，我们只需要依次执行 git add xxx 和 git commit -m ‘xxx’ 两个命令即可。其实就这一句有用！先 add 再 commit，行了，你学会 git 了。<br>8、git log 查看变更历史</p>
 <h2 id="将本地仓库上传到-GitHub"><a href="#将本地仓库上传到-GitHub" class="headerlink" title="将本地仓库上传到 GitHub"></a>将本地仓库上传到 GitHub</h2><p>1、在 GitHub 上新建一个空仓库，直接创建就好了，名称随意，什么都不用改，一般可以跟本地目录名一致，也叫做 git-demo-1，<br>2、点击创建按钮之后，GitHub 就会把后续的操作全告诉<br>3、我使用ssh的，所以选择ssh命令行。在上面已经初始化了本地仓库，所以选择第二种方式，git remote add origin git@github.com:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/git-demo-1.git，复制并运行它。复制第二行 git push -u origin master，运行它（第一种是比较多的命令行）<br>4、刷新当前页面，你的仓库就上传到 GitHub 了！</p>
@@ -474,6 +475,14 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-archive"> Total : 15 </div>
     
     <div class="post-archive">
@@ -491,22 +500,22 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/a标签的一些知识/" >a标签的一些知识</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/form表单的知识点/" >form表单的知识点</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
         </li>
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/a标签的一些知识/" >a标签的一些知识</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/文档流-div高度-脱离文档流/" >文档流-div高度-脱离文档流</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/form表单的知识点/" >form表单的知识点</a>
         </li>
     
     
@@ -521,17 +530,17 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签6/" >HTML标签6</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签4/" >HTML标签4</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签6/" >HTML标签6</a>
         </li>
     
     
