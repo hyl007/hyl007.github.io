@@ -158,16 +158,14 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/23/HTML标签3/" >
+            <a class="abstract-title" href = "/2018/04/10/清除float浮动/" >
                 
-                    <span>HTML标签3</span>
+                    <span>清除float浮动</span>
             </a>
-            <a class="content-show-full" href = "/2018/01/23/HTML标签3/" >
+            <a class="content-show-full" href = "/2018/04/10/清除float浮动/" >
                 <div class="abstract-content">
-                    一、表单HTML 提供了许多可一起使用的元素，这些元素能用来创建一个用户可以填写并提交到网站或应用程序的表单。详情请参阅 HTML forms guide。
-元素：button描述：HTML button元素 表示一个可点击的按钮。能够在表单，或者 HTML 文档的任一需要按钮的位置。默认情况下 HTML 按钮会呈现与用户主机相似的样式，基于 user agent。
-元素：datalist描述：HTML Datalist 元素 (datalist) 包含了一组option元素,这些元素表示其它表单控件可选值.
-元素：fieldset描述：fieldset 标签可以将表单内的相关元素分组。...
+                    float浮动推荐这种方法一个元素加了float，在这个元素的父元素加以下伪类，减少bug.12345.clerafix::after&#123;content:&apos;&apos;;display:both;clear:both;&#125;
+例子：12345678910111213&lt;style&gt; li&#123;float:left;&#125; .clerafix::after&#123; content:&apos;&apos;; display:both; clear:both; ｝&lt;/style&gt;   &lt;ol class=&quot;cler...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -175,7 +173,7 @@
                 
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/23</span>
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
                 </div>
             </div>
         </article>
@@ -183,17 +181,16 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/20/HTML标签2/" >
+            <a class="abstract-title" href = "/2018/04/10/form表单的知识点/" >
                 
-                    <span>HTML标签2</span>
+                    <span>form表单的知识点</span>
             </a>
-            <a class="content-show-full" href = "/2018/01/20/HTML标签2/" >
+            <a class="content-show-full" href = "/2018/04/10/form表单的知识点/" >
                 <div class="abstract-content">
-                    一、图片和多媒体HTML 支持各种多媒体资源，例如图像，音频和视频。
-元素：area描述：HTML area 元素 在图片上定义一个热点区域
-元素：audio描述：HTML audio 元素用于在文档中表示音频内容。audio元素可以包含多个音频资源， 这些音频资源可以使用 src 属性或者source 元素来进行描述； 浏览器将会选择最合适的一个来使用。对于不支持audio元素的浏览器，audio元素也可以作为浏览器不识别的内容加入到文档中。
-元素：img描述：HTML Image 元素img代表文档中的一个图像。
-元素：map描述：HTML map 属性与area 属性一起使用来定义...
+                    form主要是post请求  (for action=”users” method=”post”)form要有一个提交按钮（input type=”submit” value=”提交”），比如用户名、密码。target属性跟a标签一样。
+inputbutten会自动变成提交按钮(如submit)，butten如果有type=button，就是普通按钮，没办法提交。如果type=submit是提交按钮（按回车键可以提交）。
+你好（label的for=xxx，id=xxx，是为点击‘你好’可以响应，也可以包起来用:用户名 ）
+
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -201,7 +198,7 @@
                 
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/20</span>
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
                 </div>
             </div>
         </article>
@@ -209,16 +206,14 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/19/HTML标签1/" >
+            <a class="abstract-title" href = "/2018/04/10/a标签的一些知识/" >
                 
-                    <span>HTML标签1</span>
+                    <span>a标签的一些知识</span>
             </a>
-            <a class="content-show-full" href = "/2018/01/19/HTML标签1/" >
+            <a class="content-show-full" href = "/2018/04/10/a标签的一些知识/" >
                 <div class="abstract-content">
-                    一、根元素元素：html描述：HTML html 元素 表示一个HTML文档的根（顶级元素），所所以它也被称为根元素。其他所有其他元素必须是此元素的后代。
-二、文档元数据元数据（Metadata）含有页面的相关信息，包括样式、脚本及数据，能帮助一些软件 (如搜索引擎， 浏览器等等）更好地运用和渲染页面。对于样式和脚本的元数据，可以直接在网页里定义，也可以链接到包含相关信息的外部文件。
-元素：link描述：HTML 中link元素指定了外部资源与当前文档的关系. 这个元素的使用方法包括为导航定义关系框架.这个元素经常用来链接css文件。
-元素：meta描述：HTML meta元素表示那些不...
+                    a标签的一些细节比如1、//baidu.com （无协议的,要安装http-server才能跳转到百度)2、javascript:;（伪协议的，不跳转，不发送请求）javascript:alert(1);(跳出警告框)3、#xxx   ?name=qqq ./index.html4、download是强制下载(另为一种a标签支持下载，在http上设置content-type：application/octet-stream。)
+
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -226,7 +221,7 @@
                 
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/19</span>
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
                 </div>
             </div>
         </article>
@@ -234,14 +229,15 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/15/我来写一篇博客/" >
+            <a class="abstract-title" href = "/2018/04/10/文档流-div高度-脱离文档流/" >
                 
-                    <span>我来写一篇博客</span>
+                    <span>文档流-div高度-脱离文档流</span>
             </a>
-            <a class="content-show-full" href = "/2018/01/15/我来写一篇博客/" >
+            <a class="content-show-full" href = "/2018/04/10/文档流-div高度-脱离文档流/" >
                 <div class="abstract-content">
-                    我这次写下整个过程。系统是window，使用git bash工具
-开始的安装过程一、在Github上新建一个repository,repository的名称为【我的用户名.github.io】(用户名一定要是的自己帐号用户名-必须的)二、我首先进入E盘，要安装Hexo,命令（npm install -g hexo-cli）三、安装好后，命令 （hexo init woBlog） 创建了一个目录。（cd woBlog） 进入目录 命令 （npm i）四、命令 （hexo new 重新开始的博客之旅）   确定后会有一个路径 xxxxxxxxxxxxxxxxxx.md五、命令（start x...
+                    文档流文档流：文档内元素的流动方向（从左往右，从上往下）当内联元素单词过长时，要word-break:break-all断开。（文档流默认为一个”东西”，所以单词过长要断开）内联元素的高度有时会由不同字体改变，比如字体设置font-size:100px,有些高度会140px,有些会121px(一般字体都会有建议的行高）。内联元素高度一般有基线+上部+下部+空隙，还有就是字体font-size:10px是由上部加下部)
+div高度决定div高度由其内部文档流元素的高度总和决定块级元素不要设置高宽度，容易出bug。
+脱离文档流脱离文档流会影响块级高度，使用fixed会往内缩（宽度变小，注意不...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -249,7 +245,7 @@
                 
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/15</span>
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
                 </div>
             </div>
         </article>
@@ -257,17 +253,14 @@
     
     
         <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/15/hello-world/" >
+            <a class="abstract-title" href = "/2018/04/10/git配置与使用git/" >
                 
-                    <span>Hello World</span>
+                    <span>git配置与使用git</span>
             </a>
-            <a class="content-show-full" href = "/2018/01/15/hello-world/" >
+            <a class="content-show-full" href = "/2018/04/10/git配置与使用git/" >
                 <div class="abstract-content">
-                    Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More...
+                    配置gitgit config –global user.name 你的英文名git config –global user.email 你的邮箱git config –global push.default matchinggit config –global core.quotepath falsegit config –global core.editor “vim”使用git,一定要运行这五句话，不然会很坑爹。
+使用git初始化和一些git的命令1、创建目录作为我们的项目目录：mkdir git-demo-12、进入目录 cd git-demo-13、git init，这句命令会...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -275,16 +268,12 @@ More...
                 
                 <!-- date  -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/15</span>
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
                 </div>
             </div>
         </article>
     
     <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/2018/">#PREV</a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
-    </nav>
     
 </main>
             <!-- profile -->

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        Hyl Blog
+        清除float浮动 · Hyl Blog
         
     </title>
     <link rel="icon" href= /assets/888.jpg>
@@ -58,6 +58,8 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
@@ -65,27 +67,65 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Hyl Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">清除float浮动</a>
+            </div>
+    </div>
+    
     <a class="home-link" href=/>Hyl Blog</a>
 </header>
     <div class="wrapper">
         <div class="site-intro">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/777.png)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            清除float浮动
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/04/10</span>
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe604;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">
+                        &#xe601;
+                    </span>
+                    <span class="bdsharebuttonbox">
+                        <a href="#" class="bds_more shareText" data-cmd="more">Share</a>
+                    </span>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -153,139 +193,37 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main index-page">
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>float浮动<br>推荐这种方法<br>一个元素加了float，在这个元素的父元素加以下伪类，减少bug.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.clerafix::after&#123;</span><br><span class="line">content:&apos;&apos;;</span><br><span class="line">display:both;</span><br><span class="line">clear:both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line"> li&#123;float:left;&#125;</span><br><span class="line"> .clerafix::after&#123;</span><br><span class="line"> content:&apos;&apos;;</span><br><span class="line"> display:both;</span><br><span class="line"> clear:both;</span><br><span class="line"> ｝</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">   &lt;ol class=&quot;clerafix&quot;&gt;</span><br><span class="line">         &lt;li&gt;&lt;/li&gt;</span><br><span class="line">         &lt;li&gt;&lt;/li&gt;</span><br><span class="line">         &lt;li&gt;&lt;/li&gt;</span><br><span class="line">   &lt;/ol&gt;</span><br></pre></td></tr></table></figure></p>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+            <li class="previous">
+                <a href= "/2018/04/10/form表单的知识点/" title= form表单的知识点 >
+                    <span>Previous Post</span>
+                    <span>form表单的知识点</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
     
+    <!--PC版-->
+
+    <!--PC版-->
+
+
     
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/23/HTML标签3/" >
-                
-                    <span>HTML标签3</span>
-            </a>
-            <a class="content-show-full" href = "/2018/01/23/HTML标签3/" >
-                <div class="abstract-content">
-                    一、表单HTML 提供了许多可一起使用的元素，这些元素能用来创建一个用户可以填写并提交到网站或应用程序的表单。详情请参阅 HTML forms guide。
-元素：button描述：HTML button元素 表示一个可点击的按钮。能够在表单，或者 HTML 文档的任一需要按钮的位置。默认情况下 HTML 按钮会呈现与用户主机相似的样式，基于 user agent。
-元素：datalist描述：HTML Datalist 元素 (datalist) 包含了一组option元素,这些元素表示其它表单控件可选值.
-元素：fieldset描述：fieldset 标签可以将表单内的相关元素分组。...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/23</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/20/HTML标签2/" >
-                
-                    <span>HTML标签2</span>
-            </a>
-            <a class="content-show-full" href = "/2018/01/20/HTML标签2/" >
-                <div class="abstract-content">
-                    一、图片和多媒体HTML 支持各种多媒体资源，例如图像，音频和视频。
-元素：area描述：HTML area 元素 在图片上定义一个热点区域
-元素：audio描述：HTML audio 元素用于在文档中表示音频内容。audio元素可以包含多个音频资源， 这些音频资源可以使用 src 属性或者source 元素来进行描述； 浏览器将会选择最合适的一个来使用。对于不支持audio元素的浏览器，audio元素也可以作为浏览器不识别的内容加入到文档中。
-元素：img描述：HTML Image 元素img代表文档中的一个图像。
-元素：map描述：HTML map 属性与area 属性一起使用来定义...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/20</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/19/HTML标签1/" >
-                
-                    <span>HTML标签1</span>
-            </a>
-            <a class="content-show-full" href = "/2018/01/19/HTML标签1/" >
-                <div class="abstract-content">
-                    一、根元素元素：html描述：HTML html 元素 表示一个HTML文档的根（顶级元素），所所以它也被称为根元素。其他所有其他元素必须是此元素的后代。
-二、文档元数据元数据（Metadata）含有页面的相关信息，包括样式、脚本及数据，能帮助一些软件 (如搜索引擎， 浏览器等等）更好地运用和渲染页面。对于样式和脚本的元数据，可以直接在网页里定义，也可以链接到包含相关信息的外部文件。
-元素：link描述：HTML 中link元素指定了外部资源与当前文档的关系. 这个元素的使用方法包括为导航定义关系框架.这个元素经常用来链接css文件。
-元素：meta描述：HTML meta元素表示那些不...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/19</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/15/我来写一篇博客/" >
-                
-                    <span>我来写一篇博客</span>
-            </a>
-            <a class="content-show-full" href = "/2018/01/15/我来写一篇博客/" >
-                <div class="abstract-content">
-                    我这次写下整个过程。系统是window，使用git bash工具
-开始的安装过程一、在Github上新建一个repository,repository的名称为【我的用户名.github.io】(用户名一定要是的自己帐号用户名-必须的)二、我首先进入E盘，要安装Hexo,命令（npm install -g hexo-cli）三、安装好后，命令 （hexo init woBlog） 创建了一个目录。（cd woBlog） 进入目录 命令 （npm i）四、命令 （hexo new 重新开始的博客之旅）   确定后会有一个路径 xxxxxxxxxxxxxxxxxx.md五、命令（start x...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/15</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/15/hello-world/" >
-                
-                    <span>Hello World</span>
-            </a>
-            <a class="content-show-full" href = "/2018/01/15/hello-world/" >
-                <div class="abstract-content">
-                    Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/15</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/2018/">#PREV</a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
-    </nav>
-    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -333,6 +271,13 @@ More...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
