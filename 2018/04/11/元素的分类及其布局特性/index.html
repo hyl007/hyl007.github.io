@@ -197,9 +197,9 @@
     <article class="article-entry">
         <h1 id="元素的分类及其布局特性"><a href="#元素的分类及其布局特性" class="headerlink" title="元素的分类及其布局特性"></a>元素的分类及其布局特性</h1><h2 id="元素的分类"><a href="#元素的分类" class="headerlink" title="元素的分类"></a>元素的分类</h2><p>从元素的布局特性来分，主要可以分为三类元素：block-level（块级）元素、inline-level（行<br>内级）元素和inline-block-level（行内块级）元素。<br>1、 块级元素<br>display属性取block、table、flex、grid和list-item等值的独占一行显示的元素。<br>2、行内级元素<br>display属性取inline值的可在同一行内排列显示的元素。<br>3、行内块级元素<br>display属性取inline-block、inline-table、inline-flex和inline-grid等值的兼具块级元素和<br>行内级元素布局特性的元素。</p>
 <h2 id="布局特性"><a href="#布局特性" class="headerlink" title="布局特性"></a>布局特性</h2><p>块级元素（block-level）的布局特性<br>1、独占一行（width默认为100%，height为0）；<br>2、可以设置任何尺寸相关的属性（width、padding、margin和border）；</p>
-<h2 id="行内级元素（inline-level）的布局特性"><a href="#行内级元素（inline-level）的布局特性" class="headerlink" title="行内级元素（inline-level）的布局特性"></a>行内级元素（inline-level）的布局特性</h2><p>行内级元素的布局特性之前，我们先了解一下行内级元素的分类，其可再细分两类元素：<br>1、可置换行内元素<br>按字面翻译，“可置换行内元素”，是展示内容不在CSS作用域内的元素。这句话是不是不好理解？<br>我们可以换另外一种方式理解：“可置换行内元素”，是这样一类元素，其展示的内容是通过元素<br>的src、value等属性或CSS content属性从外部引用得到的，可被替换的。随着内容来源或内容数<br>量的变化，可置换元素本身也会有水平和垂直方向上尺寸的变化。典型的可替换元素有 <img>、<br><code>&lt;object&gt;</code>、<code>&lt;video&gt;</code>和 <code>&lt;embed&gt;</code>，表单类的可替换元素有<code>&lt;textarea&gt;</code> 和<code>&lt;input&gt;</code>，某些元素只<br>在一些特殊情况下表现为可替换元素，例如 <code>&lt;audio&gt;</code> 、<code>&lt;object&gt;</code>、<code>&lt;canvas&gt;</code>和<code>&lt;applet&gt;</code>。<br>2、不可置换行内元素<br>“不可置换行内元素”其实就是我们常见的一类行内元素，这一类行内元素有<code>&lt;a&gt;</code>和<code>&lt;span&gt;</code>等。“不<br>可置换行内元素”是相对于“可置换行内元素”的，其展示的内容是在CSS作用域范围内的，是不可<br>替换的。</p>
-<p>言归正传，行内级元素有如下几个布局特性：<br>⑴在一行内可以与多个同类型的元素按从左到右的顺序排列；<br>⑵不可置换行内元素不能设置width、height和垂直方向上的margin，而可置换行内元素则可以；<br>⑶在水平和垂直方向上的对齐方式，行内级元素分别受父元素的text-align属性和自身vertical-<br>align属性的控制（父元素是table-cell元素时，也受父元素的vertical-align属性控制），在水<br>平方向上默认左对齐，在垂直方向上默认在行框的baseline基线上显示。</p>
-<h2 id="行内块级元素（inline-block-level）的布局特性"><a href="#行内块级元素（inline-block-level）的布局特性" class="headerlink" title="行内块级元素（inline-block-level）的布局特性"></a>行内块级元素（inline-block-level）的布局特性</h2><p>排列方式与行内级元素同，不独占一行，在一行内按从左到右的顺序排列；<br>水平和垂直方向上的对齐方式与行内级元素同；<br>和块级元素一样，可以设置任何尺寸属性（但width默认为0）；</p>
+<h2 id="行内级元素（inline-level）的布局特性"><a href="#行内级元素（inline-level）的布局特性" class="headerlink" title="行内级元素（inline-level）的布局特性"></a>行内级元素（inline-level）的布局特性</h2><p>行内级元素的布局特性之前，我们先了解一下行内级元素的分类，其可再细分两类元素：<br>1、可置换行内元素<br>按字面翻译，“可置换行内元素”，是展示内容不在CSS作用域内的元素。这句话是不是不好理解？我们可以换另外一种方式理解：“可置换行内元素”，是这样一类元素，其展示的内容是通过元素的src、value等属性或CSS content属性从外部引用得到的，可被替换的。随着内容来源或内容数量的变化，可置换元素本身也会有水平和垂直方向上尺寸的变化。典型的可替换元素有 <code>&lt;img&gt;</code>、<code>&lt;object&gt;</code>、<code>&lt;video&gt;</code>和 <code>&lt;embed&gt;</code>，表单类的可替换元素有<code>&lt;textarea&gt;</code> 和<code>&lt;input&gt;</code>，某些元素只在一些特殊情况下表现为可替换元素，例如 <code>&lt;audio&gt;</code> 、<code>&lt;object&gt;</code>、<code>&lt;canvas&gt;</code>和<code>&lt;applet&gt;</code>。<br>2、不可置换行内元素<br>“不可置换行内元素”其实就是我们常见的一类行内元素，这一类行内元素有<code>&lt;a&gt;</code>和<code>&lt;span&gt;</code>等。“不可置换行内元素”是相对于“可置换行内元素”的，其展示的内容是在CSS作用域范围内的，是不可替换的。</p>
+<p>言归正传，行内级元素有如下几个布局特性：<br>⑴在一行内可以与多个同类型的元素按从左到右的顺序排列；<br>⑵不可置换行内元素不能设置width、height和垂直方向上的margin，而可置换行内元素则可以；<br>⑶在水平和垂直方向上的对齐方式，行内级元素分别受父元素的text-align属性和自身vertical-align属性的控制（父元素是table-cell元素时，也受父元素的vertical-align属性控制），在水平方向上默认左对齐，在垂直方向上默认在行框的baseline基线上显示。</p>
+<h2 id="行内块级元素（inline-block-level）的布局特性"><a href="#行内块级元素（inline-block-level）的布局特性" class="headerlink" title="行内块级元素（inline-block-level）的布局特性"></a>行内块级元素（inline-block-level）的布局特性</h2><p>1、排列方式与行内级元素同，不独占一行，在一行内按从左到右的顺序排列；<br>2、水平和垂直方向上的对齐方式与行内级元素同；<br>3、和块级元素一样，可以设置任何尺寸属性（但width默认为0）；</p>
 
     </article>
     <!-- 前后页  -->
@@ -658,6 +658,24 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-archive"> Total : 27 </div>
     
     <div class="post-archive">
@@ -685,12 +703,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
         </li>
     
     
@@ -720,12 +738,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/闭包/" >闭包</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/异步同步与回调/" >异步同步与回调</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/异步同步与回调/" >异步同步与回调</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/闭包/" >闭包</a>
         </li>
     
     
@@ -735,22 +753,22 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/a标签的一些知识/" >a标签的一些知识</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/form表单的知识点/" >form表单的知识点</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/文档流-div高度-脱离文档流/" >文档流-div高度-脱离文档流</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/文档流-div高度-脱离文档流/" >文档流-div高度-脱离文档流</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/a标签的一些知识/" >a标签的一些知识</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
         </li>
     
     
@@ -765,7 +783,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签4/" >HTML标签4</a>
         </li>
     
     
@@ -775,7 +793,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签4/" >HTML标签4</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
         </li>
     
     
