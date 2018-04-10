@@ -197,7 +197,7 @@
     <article class="article-entry">
         <h1 id="一、什么叫闭包"><a href="#一、什么叫闭包" class="headerlink" title="一、什么叫闭包"></a>一、什么叫闭包</h1><p>JavaScript有两种作用域：全局作用域和函数作用域。函数内部可以直接读取全局变量。但是，在函数外部无法读取函数内部声明的变量。换言之，如果一个函数，使用了它范围外的变量，那么‘这个函数+这个变量’就叫做闭包。<br>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function f1() &#123;</span><br><span class="line">  var n = 1;</span><br><span class="line">  function f2() &#123;</span><br><span class="line">    console.log(n);</span><br><span class="line">  &#125;</span><br><span class="line">  return f2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>函数f1的返回值就是函数f2，由于f2可以读取f1的内部变量，所以就可以在外部获得f1的内部变量了。闭包就是函数f2，即能够读取其他函数内部变量的函数。简单来说闭包：如果一个函数使用了它范围外的变量，那么这个函数叫做闭包。</p>
-<h1 id="闭包的用途"><a href="#闭包的用途" class="headerlink" title="闭包的用途"></a>闭包的用途</h1><p>闭包的用途：<br>1.从外部读取函数内部的变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function f1() &#123;</span><br><span class="line">  var n = 9;</span><br><span class="line">  function f2() &#123;</span><br><span class="line">    console.log(n);</span><br><span class="line">  &#125;</span><br><span class="line">  return f2;</span><br><span class="line">&#125;</span><br><span class="line">var result = f1();</span><br><span class="line">result(); // 9</span><br></pre></td></tr></table></figure></p>
+<h1 id="二、闭包的用途"><a href="#二、闭包的用途" class="headerlink" title="二、闭包的用途"></a>二、闭包的用途</h1><p>闭包的用途：<br>1.从外部读取函数内部的变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function f1() &#123;</span><br><span class="line">  var n = 9;</span><br><span class="line">  function f2() &#123;</span><br><span class="line">    console.log(n);</span><br><span class="line">  &#125;</span><br><span class="line">  return f2;</span><br><span class="line">&#125;</span><br><span class="line">var result = f1();</span><br><span class="line">result(); // 9</span><br></pre></td></tr></table></figure></p>
 <p>这段代码中，函数f1的返回值就是函数f2，由于f2可以读取f1的内部变量，所以就可以在外部获得f1的内部变量了。<br>2.让这些变量始终保持在内存中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function f1(n) &#123;</span><br><span class="line">  return function () &#123;</span><br><span class="line">    return n++;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">var a1 = f1(1);</span><br><span class="line">a1() // 1</span><br><span class="line">a1() // 2</span><br><span class="line">a1() // 3</span><br></pre></td></tr></table></figure></p>
 <p>//这段代码中，闭包使得内部变量记住上一次调用时的运算结果。<br>3.封装对象的私有属性和私有方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function f1(n) &#123;</span><br><span class="line">  return function () &#123;</span><br><span class="line">    return n++;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">var a1 = f1(1);</span><br><span class="line">a1() // 1</span><br><span class="line">a1() // 2</span><br><span class="line">a1() // 3</span><br><span class="line">var a2 = f1(5);</span><br><span class="line">a2() // 5</span><br><span class="line">a2() // 6</span><br><span class="line">a2() // 7</span><br></pre></td></tr></table></figure></p>
 <p>这段代码中，a1 和 a2 是相互独立的，各自返回自己的私有变量。</p>
@@ -287,7 +287,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、什么叫闭包"><span class="toc-number">1.</span> <span class="toc-text">一、什么叫闭包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#闭包的用途"><span class="toc-number">2.</span> <span class="toc-text">闭包的用途</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、什么叫闭包"><span class="toc-number">1.</span> <span class="toc-text">一、什么叫闭包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、闭包的用途"><span class="toc-number">2.</span> <span class="toc-text">二、闭包的用途</span></a></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
@@ -637,30 +637,6 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-archive"> Total : 24 </div>
     
     <div class="post-archive">
@@ -673,12 +649,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</a>
         </li>
     
     
@@ -698,12 +674,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/前端mvc/" >前端mvc</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/JSON与Javascript关系/" >JSON与Javascript关系</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/JSON与Javascript关系/" >JSON与Javascript关系</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/前端mvc/" >前端mvc</a>
         </li>
     
     
@@ -723,22 +699,22 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/a标签的一些知识/" >a标签的一些知识</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/form表单的知识点/" >form表单的知识点</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/文档流-div高度-脱离文档流/" >文档流-div高度-脱离文档流</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/a标签的一些知识/" >a标签的一些知识</a>
         </li>
     
     
@@ -753,7 +729,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签4/" >HTML标签4</a>
         </li>
     
     
@@ -763,7 +739,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签4/" >HTML标签4</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
         </li>
     
     

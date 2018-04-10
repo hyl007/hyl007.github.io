@@ -195,7 +195,7 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Cookie-Session-localStroage-SessionStorage"><a href="#Cookie-Session-localStroage-SessionStorage" class="headerlink" title="Cookie+Session+localStroage+SessionStorage"></a>Cookie+Session+localStroage+SessionStorage</h1><h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><p>1、服务器通过Set-Cookid头给客户端一串字符串<br>2、客服端每次访问相同域名的网页时，必须带上这段字符串<br>3、客户端要在一段时间内保存这个Cookid<br>4、Cookie 默认在用户关闭页面后就失效，后台代码可以任意设置 Cookie 的过期时间<br>5、大小大概在 4kb 以内</p>
+        <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><p>1、服务器通过Set-Cookid头给客户端一串字符串<br>2、客服端每次访问相同域名的网页时，必须带上这段字符串<br>3、客户端要在一段时间内保存这个Cookid<br>4、Cookie 默认在用户关闭页面后就失效，后台代码可以任意设置 Cookie 的过期时间<br>5、大小大概在 4kb 以内</p>
 <h2 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h2><p>1、将sessionID（随机数）通过cookie发给客户端<br>2、客户端访问服务器时，服务器读取sessionID<br>3、服务器有一块内存（哈希表）保存了所有session<br>4、通过 SessionID 我们可以得到对应用户的隐私信息，如 id、email<br>5、这块内存（哈希表）就是服务器上的所有 session</p>
 <h2 id="LocalStorage"><a href="#LocalStorage" class="headerlink" title="LocalStorage"></a>LocalStorage</h2><p>1、LocalStorage 跟 HTTP 无关<br>2、HTTP 不会带上 LocalStorage 的值<br>3、只有相同域名的页面才能互相读取 LocalStorage（没有同源那么严格）<br>4、每个域名 localStorage 最大存储量为 5Mb 左右（每个浏览器不一样）<br>5、常用场景：记录有没有提示过用户（没有用的信息，不能记录密码）<br>6、LocalStorage 永久有效，除非用户清理缓存</p>
 <h2 id="SessionStorage（会话存储）"><a href="#SessionStorage（会话存储）" class="headerlink" title="SessionStorage（会话存储）"></a>SessionStorage（会话存储）</h2><p>1、2、3、4 同上<br>SessionStorage 在用户关闭页面（会话结束）后就失效。</p>
@@ -288,7 +288,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Cookie-Session-localStroage-SessionStorage"><span class="toc-number">1.</span> <span class="toc-text">Cookie+Session+localStroage+SessionStorage</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#cookie"><span class="toc-number">1.1.</span> <span class="toc-text">cookie</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Session"><span class="toc-number">1.2.</span> <span class="toc-text">Session</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LocalStorage"><span class="toc-number">1.3.</span> <span class="toc-text">LocalStorage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SessionStorage（会话存储）"><span class="toc-number">1.4.</span> <span class="toc-text">SessionStorage（会话存储）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#各自的区别"><span class="toc-number">2.</span> <span class="toc-text">各自的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Cookie和Session-的区别"><span class="toc-number">2.1.</span> <span class="toc-text">Cookie和Session 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cookie和LocalStorage-的区别"><span class="toc-number">2.2.</span> <span class="toc-text">Cookie和LocalStorage 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LocalStorage-和-SessionStorage-的区别"><span class="toc-number">2.3.</span> <span class="toc-text">LocalStorage 和 SessionStorage 的区别</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#说明"><span class="toc-number">1.</span> <span class="toc-text">说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#cookie"><span class="toc-number">1.1.</span> <span class="toc-text">cookie</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Session"><span class="toc-number">1.2.</span> <span class="toc-text">Session</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LocalStorage"><span class="toc-number">1.3.</span> <span class="toc-text">LocalStorage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SessionStorage（会话存储）"><span class="toc-number">1.4.</span> <span class="toc-text">SessionStorage（会话存储）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#各自的区别"><span class="toc-number">2.</span> <span class="toc-text">各自的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Cookie和Session-的区别"><span class="toc-number">2.1.</span> <span class="toc-text">Cookie和Session 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cookie和LocalStorage-的区别"><span class="toc-number">2.2.</span> <span class="toc-text">Cookie和LocalStorage 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LocalStorage-和-SessionStorage-的区别"><span class="toc-number">2.3.</span> <span class="toc-text">LocalStorage 和 SessionStorage 的区别</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
@@ -638,30 +638,6 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-archive"> Total : 24 </div>
     
     <div class="post-archive">
@@ -674,12 +650,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</a>
         </li>
     
     
@@ -699,12 +675,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/前端mvc/" >前端mvc</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/JSON与Javascript关系/" >JSON与Javascript关系</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/JSON与Javascript关系/" >JSON与Javascript关系</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/前端mvc/" >前端mvc</a>
         </li>
     
     
@@ -724,22 +700,22 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/a标签的一些知识/" >a标签的一些知识</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/form表单的知识点/" >form表单的知识点</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/文档流-div高度-脱离文档流/" >文档流-div高度-脱离文档流</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/a标签的一些知识/" >a标签的一些知识</a>
         </li>
     
     
@@ -754,7 +730,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签4/" >HTML标签4</a>
         </li>
     
     
@@ -764,7 +740,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签4/" >HTML标签4</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
         </li>
     
     

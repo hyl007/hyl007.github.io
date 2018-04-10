@@ -195,7 +195,7 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="异步是不等结果，直接进行下一步操作。我们经常看到的是同步代码，对于同步代码来说等任务执行完了，得到结果，才执行下一个任务。"><a href="#异步是不等结果，直接进行下一步操作。我们经常看到的是同步代码，对于同步代码来说等任务执行完了，得到结果，才执行下一个任务。" class="headerlink" title="异步是不等结果，直接进行下一步操作。我们经常看到的是同步代码，对于同步代码来说等任务执行完了，得到结果，才执行下一个任务。"></a>异步是不等结果，直接进行下一步操作。我们经常看到的是同步代码，对于同步代码来说等任务执行完了，得到结果，才执行下一个任务。</h1><p>例如下面：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">console.log(1)</span><br><span class="line">console.log(2)</span><br><span class="line">console.log(3)</span><br></pre></td></tr></table></figure></p>
+        <h1 id="异步同步"><a href="#异步同步" class="headerlink" title="异步同步"></a>异步同步</h1><p>异步是不等结果，直接进行下一步操作。我们经常看到的是同步代码，对于同步代码来说等任务执行完了，得到结果，才执行下一个任务。<br>例如下面：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">console.log(1)</span><br><span class="line">console.log(2)</span><br><span class="line">console.log(3)</span><br></pre></td></tr></table></figure></p>
 <p>输出1 -&gt; 2 -&gt; 3，上面的代码是得到结果，才执行下一个任务。而异步不一样。<br>例如下面：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log(1)</span><br><span class="line">setTimeout(function()&#123;</span><br><span class="line">  console.log(2)</span><br><span class="line">&#125;,0)</span><br><span class="line">console.log(3)</span><br></pre></td></tr></table></figure></p>
 <p>输出结果为1 -&gt; 3 -&gt; 2<br><code>console.log(2)</code>就是异步，<code>setTimeout</code>里<code>console.log(2)</code>不等结果，就执行<code>console.log(3)``，最后才执行</code>console.log(2)``</p>
 <h1 id="回调"><a href="#回调" class="headerlink" title="回调"></a>回调</h1><p>函数a有一个参数，这个参数是个函数b，当函数a执行完以后执行函数b。那么这个过程就叫回调。<br>例子：我想买一张火车票，我跟黄牛说，你买到票就打电话来<br>代码实现：<br>1、异步中的回调<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function me(callback)&#123;</span><br><span class="line">    var result = setTimeout(function()&#123;</span><br><span class="line">        callback(2)</span><br><span class="line">    &#125;,3000)</span><br><span class="line">    console.log(1)</span><br><span class="line">&#125;</span><br><span class="line">me(function callback(result)&#123;</span><br><span class="line">    console.log(result)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
@@ -286,7 +286,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#异步是不等结果，直接进行下一步操作。我们经常看到的是同步代码，对于同步代码来说等任务执行完了，得到结果，才执行下一个任务。"><span class="toc-number">1.</span> <span class="toc-text">异步是不等结果，直接进行下一步操作。我们经常看到的是同步代码，对于同步代码来说等任务执行完了，得到结果，才执行下一个任务。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#回调"><span class="toc-number">2.</span> <span class="toc-text">回调</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#异步同步"><span class="toc-number">1.</span> <span class="toc-text">异步同步</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#回调"><span class="toc-number">2.</span> <span class="toc-text">回调</span></a></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>
@@ -636,30 +636,6 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-archive"> Total : 24 </div>
     
     <div class="post-archive">
@@ -672,12 +648,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</a>
         </li>
     
     
@@ -697,12 +673,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/前端mvc/" >前端mvc</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/JSON与Javascript关系/" >JSON与Javascript关系</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/JSON与Javascript关系/" >JSON与Javascript关系</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/前端mvc/" >前端mvc</a>
         </li>
     
     
@@ -722,22 +698,22 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/a标签的一些知识/" >a标签的一些知识</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/form表单的知识点/" >form表单的知识点</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/文档流-div高度-脱离文档流/" >文档流-div高度-脱离文档流</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/a标签的一些知识/" >a标签的一些知识</a>
         </li>
     
     
@@ -752,7 +728,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签4/" >HTML标签4</a>
         </li>
     
     
@@ -762,7 +738,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签4/" >HTML标签4</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
         </li>
     
     
