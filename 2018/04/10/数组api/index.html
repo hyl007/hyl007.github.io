@@ -199,7 +199,7 @@
 <h2 id="sort，这个API会改变原值！只有这一个API会改变原值"><a href="#sort，这个API会改变原值！只有这一个API会改变原值" class="headerlink" title="sort，这个API会改变原值！只有这一个API会改变原值"></a>sort，这个API会改变原值！只有这一个API会改变原值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var l = [2,3,1];</span><br><span class="line">l.sort();    //[1,2,3]，从小到大排序</span><br><span class="line">l.sort(function(a,b)&#123;return a-b&#125;) //[1,2,3]，从小到大排序</span><br><span class="line">l.sort(function(a,b)&#123;return b-a&#125;) //[3,2,1]，从大到小排序</span><br></pre></td></tr></table></figure>
 <p>按成绩高到低排名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var students = [&apos;小明&apos;,&apos;小红&apos;,&apos;小花&apos;];</span><br><span class="line">var scores = &#123; 小明: 59, 小红: 99, 小花: 80 &#125;;</span><br><span class="line">students.sort(function(x,y)&#123;return scores[y] - scores[x]&#125;)    // [&quot;小红&quot;, &quot;小花&quot;, &quot;小明&quot;]</span><br></pre></td></tr></table></figure></p>
 <h2 id="join"><a href="#join" class="headerlink" title="join"></a>join</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = [1,2,3];</span><br><span class="line">a.join(&apos;和&apos;);    //&apos;1和2和3&apos;</span><br><span class="line">a.join();    //&apos;1,2,3&apos;，默认是逗号</span><br></pre></td></tr></table></figure>
-<h2 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = [1,2,3];</span><br><span class="line">var b = [3,4,5];</span><br><span class="line">var c = a.concat(b);    //&apos;1,2,3,3,4,5&apos;</span><br><span class="line">var d = a.concat([]);    //&apos;1,2,3&apos;，d和a的值一样，但d和a是两个数组，所以concat可以用来深拷贝数组</span><br></pre></td></tr></table></figure>
+<h2 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = [1,2,3];</span><br><span class="line">var b = [3,4,5];</span><br><span class="line">var c = a.concat(b); //&apos;1,2,3,3,4,5&apos;</span><br><span class="line">var d = a.concat([]); //&apos;1,2,3&apos;，d和a的值一样，但d和a是两个数组，所以concat可以用来深拷贝数组</span><br></pre></td></tr></table></figure>
 <h2 id="map（映射）"><a href="#map（映射）" class="headerlink" title="map（映射）"></a>map（映射）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = [1,2,3];</span><br><span class="line">a.map(function(value,key)&#123;</span><br><span class="line">  return value * 2;</span><br><span class="line">&#125;)    //[2,4,6];</span><br><span class="line">a.map(value =&gt; value * 2);    //[2,4,6]</span><br></pre></td></tr></table></figure>
 <h2 id="filter（过滤器）"><a href="#filter（过滤器）" class="headerlink" title="filter（过滤器）"></a>filter（过滤器）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var a = [1,2,3,4,5];</span><br><span class="line">a.filter(function(value,key)&#123;</span><br><span class="line">   return value &gt;= 3;</span><br><span class="line">&#125;)    //[3,4,5]</span><br><span class="line">a.filter(function(value,key)&#123;</span><br><span class="line">    return value % 2 === 0 ;</span><br><span class="line">&#125;)    //返回偶数，[2,4]</span><br><span class="line">a.filter(function(value,key)&#123;</span><br><span class="line">  return value % 2 === 0 ;</span><br><span class="line">&#125;).map(function(value)&#123;</span><br><span class="line">    return value * value;</span><br><span class="line">&#125;)     //[4,16];</span><br></pre></td></tr></table></figure>
 <h2 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = [1,2,3];</span><br><span class="line">a.reduce(function(sum,n)&#123;</span><br><span class="line">   return sum + n ;</span><br><span class="line">&#125;,0)//6</span><br></pre></td></tr></table></figure>
@@ -621,6 +621,28 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-archive"> Total : 25 </div>
     
     <div class="post-archive">
@@ -638,12 +660,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</a>
         </li>
     
     
@@ -653,12 +675,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/call和apply和bind/" >call和apply和bind</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/es5模仿一个类/" >es5模仿一个类</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/es5模仿一个类/" >es5模仿一个类</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/call和apply和bind/" >call和apply和bind</a>
         </li>
     
     
@@ -673,12 +695,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/闭包/" >闭包</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/异步同步与回调/" >异步同步与回调</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/异步同步与回调/" >异步同步与回调</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/闭包/" >闭包</a>
         </li>
     
     
@@ -688,7 +710,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/form表单的知识点/" >form表单的知识点</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
         </li>
     
     
@@ -698,7 +720,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/form表单的知识点/" >form表单的知识点</a>
         </li>
     
     
@@ -723,12 +745,12 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签4/" >HTML标签4</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签4/" >HTML标签4</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
         </li>
     
     
