@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        Hyl Blog
+        es5模仿一个类 · Hyl Blog
         
     </title>
     <link rel="icon" href= /assets/888.jpg>
@@ -58,14 +58,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Hyl Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">es5模仿一个类</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Hyl Blog</a>
 </header>
@@ -75,17 +84,17 @@
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/intro/666.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/777.png)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Hyl Blog
-            <!-- 文章页  -->
+            es5模仿一个类
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -93,12 +102,30 @@
             <!-- 主页副标题  -->
             
             
-                Life is like a roller coaster, live it, be happy, enjoy life.
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+            <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/04/10</span>
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe604;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">
+                        &#xe601;
+                    </span>
+                    <span class="bdsharebuttonbox">
+                        <a href="#" class="bds_more shareText" data-cmd="more">Share</a>
+                    </span>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -166,301 +193,46 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >
-                
-                    <span>Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >
-                <div class="abstract-content">
-                    Cache-Control设置缓存时间为1000秒。在这个时间内请求不会发出去。会在内存里调用上一次的文件。ETag是HTTP响应头的特定版本的标识符。当Cache-Control设置时间非常长的时候，在这个时间内请求是不会发出去的。如果用ETag，客户端会发请求。标识符如果一样，就不会下载，用以前的。如果不一样，就会重新下载。
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="es5模拟一个类"><a href="#es5模拟一个类" class="headerlink" title="es5模拟一个类"></a>es5模拟一个类</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function Human(options)&#123;</span><br><span class="line">       this.name=options.name</span><br><span class="line">       this.age=options.age</span><br><span class="line">   &#125;</span><br><span class="line">   Human.prototype.species=&apos;人类&apos;</span><br><span class="line">   Human.prototype.walk=function()&#123;&#125;</span><br><span class="line">   Human.prototype.useTools=function()&#123;&#125;</span><br><span class="line">   var human=new Human(&#123;name:&apos;jack&apos;,age:18&#125;)</span><br></pre></td></tr></table></figure>
+<p>模拟一个Human的类，调用时创造了一个名为jack，年龄为18的人类，对象会有走的方法，会有使用工具的方法。</p>
 
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >
-                
-                    <span>Cookie+Session+localStroage+SessionStorage</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >
-                <div class="abstract-content">
-                    Cookie+Session+localStroage+SessionStoragecookie1、服务器通过Set-Cookid头给客户端一串字符串2、客服端每次访问相同域名的网页时，必须带上这段字符串3、客户端要在一段时间内保存这个Cookid4、Cookie 默认在用户关闭页面后就失效，后台代码可以任意设置 Cookie 的过期时间5、大小大概在 4kb 以内
-Session1、将sessionID（随机数）通过cookie发给客户端2、客户端访问服务器时，服务器读取sessionID3、服务器有一块内存（哈希表）保存了所有session4、通过 SessionID 我们可以得到对...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/get与post/" >
-                
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+            <li class="next">
+                <a href= "/2018/04/10/get与post/" title= get与post的请求和响应 >
+                    <span>Next Post</span>
                     <span>get与post的请求和响应</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/get与post/" >
-                <div class="abstract-content">
-                    请求的格式1 动词 路径 协议/版本2 Key1: value12 Key2: value22 Key3: value32 Content-Type: application/x-www-form-urlencoded2 Host: www.baidu.com2 User-Agent: curl/7.54.034 要上传的数据
-说明1、请求最多包含四部分，最少包含三部分。（也就是说第四部分可以为空）2、第三部分永远都是一个回车（\n）3、动词有 GET POST PUT PATCH DELETE HEAD OPTIONS 等4、这里的路径包括「查询参数」，但不包括「锚点」5、如果你没有写...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/es5模仿一个类/" >
-                
-                    <span>es5模仿一个类</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/es5模仿一个类/" >
-                <div class="abstract-content">
-                    es5模拟一个类12345678function Human(options)&#123;       this.name=options.name       this.age=options.age   &#125;   Human.prototype.species=&apos;人类&apos;   Human.prototype.walk=function()&#123;&#125;   Human.prototype.useTools=function()&#123;&#125;   var human=new Human(&#123;name:&apos;jack&apos;...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/JSON与Javascript关系/" >
-                
+                </a>
+            </li>
+        
+        
+            <li class="previous">
+                <a href= "/2018/04/10/JSON与Javascript关系/" title= JSON与Javascript关系 >
+                    <span>Previous Post</span>
                     <span>JSON与Javascript关系</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/JSON与Javascript关系/" >
-                <div class="abstract-content">
-                    JSON 和 JavaScript关系JavaScript是由Brendan Eich发明的语言，有七种数据类型，分别为number，string，boolean，undefined，null，object。JSON是由道格拉斯·克罗克福特发明的一门新语言，全名为JavaScript Object Notation，JSON模仿了JavaScript这门语言，分别有number，boolean，string，null，array，object数据类型，所以说json与JavaScript非常相似。区别json模仿JavaScript，但是json与JavaScript有不少区别。Java...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
     
+    <!--PC版-->
+
+    <!--PC版-->
+
+
     
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/前端mvc/" >
-                
-                    <span>前端mvc</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/前端mvc/" >
-                <div class="abstract-content">
-                    1、M是Model，是数据模型，负责对数据的存放。数据模型不必知道视图和控制器的逻辑，当控制器从服务器抓取数据或创建新的记录时，它就将数据包装成模型实例。2、V是View，是视图层，呈现给用户，用户与之交互。视图一般由HTML、CSS、JavaScript组成，视图不应当包含任何其他逻辑，只呈现图层。3、C是Controller，是控制器。控制器是数据模型和视图之间的纽带，控制器从View获取事件和输入，对它们进行处理或者调用Model发送请求到服务器数据库得到数据，并相应地更新在视图上。例子：12345678910111213141516171819202122232425!funct...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/call和apply和bind/" >
-                
-                    <span>call和apply和bind</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/call和apply和bind/" >
-                <div class="abstract-content">
-                    简单的介绍call、apply、bind，一般最好与this结合来研究。很多初学者不知道this是什么？应该说是call的第一个参数。当你调用函数用call，就会比较清楚。1、call：call 是函数的正常调用方式，并指定上下文 this。2、apply：apply 的作用和 call 一样，只是在调用的时候，传参数的方式不同。区别是 apply 接受的是数组参数，call 接受的是连续参数。如下代码：12345function add(a,b)&#123;    return a+b;&#125;add.call(add, 5, 3); //8add.apply(add, [5, 3...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/闭包/" >
-                
-                    <span>闭包</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/闭包/" >
-                <div class="abstract-content">
-                    一、什么叫闭包JavaScript有两种作用域：全局作用域和函数作用域。函数内部可以直接读取全局变量。但是，在函数外部无法读取函数内部声明的变量。换言之，如果一个函数，使用了它范围外的变量，那么‘这个函数+这个变量’就叫做闭包。例子：1234567function f1() &#123;  var n = 1;  function f2() &#123;    console.log(n);  &#125;  return f2;&#125;
-函数f1的返回值就是函数f2，由于f2可以读取f1的内部变量，所以就可以在外部获得f1的内部变量了。闭包就是函数f2，即能够读取其他函数内部变量的...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/异步同步与回调/" >
-                
-                    <span>异步同步与回调</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/异步同步与回调/" >
-                <div class="abstract-content">
-                    异步是不等结果，直接进行下一步操作。我们经常看到的是同步代码，对于同步代码来说等任务执行完了，得到结果，才执行下一个任务。例如下面：123console.log(1)console.log(2)console.log(3)
-输出1 -&gt; 2 -&gt; 3，上面的代码是得到结果，才执行下一个任务。而异步不一样。例如下面：12345console.log(1)setTimeout(function()&#123;  console.log(2)&#125;,0)console.log(3)
-输出结果为1 -&gt; 3 -&gt; 2console.log(2)就是异步，setTim...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/清除float浮动/" >
-                
-                    <span>清除float浮动</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/清除float浮动/" >
-                <div class="abstract-content">
-                    float浮动推荐这种方法一个元素加了float，在这个元素的父元素加以下伪类，减少bug.12345.clerafix::after&#123;content:&apos;&apos;;display:both;clear:both;&#125;
-例子：12345678910111213&lt;style&gt; li&#123;float:left;&#125; .clerafix::after&#123; content:&apos;&apos;; display:both; clear:both; ｝&lt;/style&gt;   &lt;ol class=&quot;cler...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
-    <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">#NEXT</a>
-    </nav>
-    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" src= /avatar/555.jpg >
-    <div class="profile-name">Hyl Blog</div>
-    
-    <div class="profile-signature">
-        Keep moving
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="mailto:314773165@qq.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="https://hyl007.github.io" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-    
-        
-            
-                <a href="/atom.xml" class="iconfont-archer rss" target="_blank" title="rss"></a>
-            
-        
-    
-
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                <span>
-                    <a href= //www.baidu.com target="_black">friendA</a>
-                </span>
-            
-                <span>
-                    <a href= //www.google.com target="_black">friendB</a>
-                </span>
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <div>
-                <a href = "/about" >ABOUT ME</a>
-            </div>
-        </div>
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">
@@ -506,6 +278,13 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#es5模拟一个类"><span class="toc-number">1.</span> <span class="toc-text">es5模拟一个类</span></a></li></ol>
+    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
