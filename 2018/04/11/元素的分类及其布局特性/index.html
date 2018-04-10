@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        数组api · Hyl Blog
+        元素的分类及其布局特性 · Hyl Blog
         
     </title>
     <link rel="icon" href= /assets/888.jpg>
@@ -72,7 +72,7 @@
                 <a href="/" >Hyl Blog</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">数组api</a>
+                <a href="#" class="post-name">元素的分类及其布局特性</a>
             </div>
     </div>
     
@@ -93,7 +93,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            数组api
+            元素的分类及其布局特性
             <!-- 404 -->
             
         </h1>
@@ -112,7 +112,7 @@
             <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/04/10</span>
+                <span class="post-intro-time">2018/04/11</span>
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe604;</span>
                     <span id="busuanzi_value_page_pv"></span>
@@ -195,35 +195,23 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="数组的API"><a href="#数组的API" class="headerlink" title="数组的API"></a>数组的API</h1><h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var a = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</span><br><span class="line">a.forEach(function(x,y)&#123;</span><br><span class="line">  console.log(y);    //y是key</span><br><span class="line">  console.log(x);    //x是value</span><br><span class="line">&#125;)</span><br><span class="line">//0 a</span><br><span class="line">//1 b</span><br><span class="line">//2 c</span><br></pre></td></tr></table></figure>
-<h2 id="sort，这个API会改变原值！只有这一个API会改变原值"><a href="#sort，这个API会改变原值！只有这一个API会改变原值" class="headerlink" title="sort，这个API会改变原值！只有这一个API会改变原值"></a>sort，这个API会改变原值！只有这一个API会改变原值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var l = [2,3,1];</span><br><span class="line">l.sort();    //[1,2,3]，从小到大排序</span><br><span class="line">l.sort(function(a,b)&#123;return a-b&#125;) //[1,2,3]，从小到大排序</span><br><span class="line">l.sort(function(a,b)&#123;return b-a&#125;) //[3,2,1]，从大到小排序</span><br></pre></td></tr></table></figure>
-<p>按成绩高到低排名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var students = [&apos;小明&apos;,&apos;小红&apos;,&apos;小花&apos;];</span><br><span class="line">var scores = &#123; 小明: 59, 小红: 99, 小花: 80 &#125;;</span><br><span class="line">students.sort(function(x,y)&#123;return scores[y] - scores[x]&#125;)    // [&quot;小红&quot;, &quot;小花&quot;, &quot;小明&quot;]</span><br></pre></td></tr></table></figure></p>
-<h2 id="join"><a href="#join" class="headerlink" title="join"></a>join</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = [1,2,3];</span><br><span class="line">a.join(&apos;和&apos;);    //&apos;1和2和3&apos;</span><br><span class="line">a.join();    //&apos;1,2,3&apos;，默认是逗号</span><br></pre></td></tr></table></figure>
-<h2 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = [1,2,3];</span><br><span class="line">var b = [3,4,5];</span><br><span class="line">var c = a.concat(b); //&apos;1,2,3,3,4,5&apos;</span><br><span class="line">var d = a.concat([]); //&apos;1,2,3&apos;，d和a的值一样，但d和a是两个数组，所以concat可以用来深拷贝数组</span><br></pre></td></tr></table></figure>
-<h2 id="map（映射）"><a href="#map（映射）" class="headerlink" title="map（映射）"></a>map（映射）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = [1,2,3];</span><br><span class="line">a.map(function(value,key)&#123;</span><br><span class="line">  return value * 2;</span><br><span class="line">&#125;)    //[2,4,6];</span><br><span class="line">a.map(value =&gt; value * 2);    //[2,4,6]</span><br></pre></td></tr></table></figure>
-<h2 id="filter（过滤器）"><a href="#filter（过滤器）" class="headerlink" title="filter（过滤器）"></a>filter（过滤器）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var a = [1,2,3,4,5];</span><br><span class="line">a.filter(function(value,key)&#123;</span><br><span class="line">   return value &gt;= 3;</span><br><span class="line">&#125;)    //[3,4,5]</span><br><span class="line">a.filter(function(value,key)&#123;</span><br><span class="line">    return value % 2 === 0 ;</span><br><span class="line">&#125;)    //返回偶数，[2,4]</span><br><span class="line">a.filter(function(value,key)&#123;</span><br><span class="line">  return value % 2 === 0 ;</span><br><span class="line">&#125;).map(function(value)&#123;</span><br><span class="line">    return value * value;</span><br><span class="line">&#125;)     //[4,16];</span><br></pre></td></tr></table></figure>
-<h2 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = [1,2,3];</span><br><span class="line">a.reduce(function(sum,n)&#123;</span><br><span class="line">   return sum + n ;</span><br><span class="line">&#125;,0)//6</span><br></pre></td></tr></table></figure>
-<p>求和，0是初始值，第一次传给sum的就是0，sum是每次传进来的值，之后传给sum的是return里的值，n是遍历的数。<br>下面是箭头函数的写法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.reduce((sum,n) =&gt; sum + n ,0)    //6</span><br></pre></td></tr></table></figure></p>
-<h2 id="map可以用reduce表示："><a href="#map可以用reduce表示：" class="headerlink" title="map可以用reduce表示："></a>map可以用reduce表示：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a.reduce(function(arr,n)&#123;</span><br><span class="line">    arr.push(n*2);</span><br><span class="line">    return arr;</span><br><span class="line">&#125;,[])    //[2,4,6]</span><br></pre></td></tr></table></figure>
-<h2 id="filter也可以用reduce表示："><a href="#filter也可以用reduce表示：" class="headerlink" title="filter也可以用reduce表示："></a>filter也可以用reduce表示：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a.reduce(function(arr,n)&#123;</span><br><span class="line">  if(n % 2 === 0)&#123;</span><br><span class="line">      arr.push(n)</span><br><span class="line">&#125;</span><br><span class="line">  return arr;</span><br><span class="line">&#125;,[])</span><br></pre></td></tr></table></figure>
-<h2 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array.splice(start)</span><br><span class="line">array.splice(start, deleteCount)</span><br><span class="line">array.splice(开始的位置, 删除的个数, 插入的对象1,插入的对象2, ...)</span><br></pre></td></tr></table></figure>
-<h2 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array.slice()  //保留完整数组</span><br><span class="line">array.slice(4)  //保留4到最后的数组</span><br><span class="line">array.slice(4,8)  //保留4到8以前的数组</span><br></pre></td></tr></table></figure>
+        <h1 id="元素的分类及其布局特性"><a href="#元素的分类及其布局特性" class="headerlink" title="元素的分类及其布局特性"></a>元素的分类及其布局特性</h1><h2 id="元素的分类"><a href="#元素的分类" class="headerlink" title="元素的分类"></a>元素的分类</h2><p>从元素的布局特性来分，主要可以分为三类元素：block-level（块级）元素、inline-level（行<br>内级）元素和inline-block-level（行内块级）元素。<br>1、 块级元素<br>display属性取block、table、flex、grid和list-item等值的独占一行显示的元素。<br>2、行内级元素<br>display属性取inline值的可在同一行内排列显示的元素。<br>3、行内块级元素<br>display属性取inline-block、inline-table、inline-flex和inline-grid等值的兼具块级元素和<br>行内级元素布局特性的元素。</p>
+<h2 id="布局特性"><a href="#布局特性" class="headerlink" title="布局特性"></a>布局特性</h2><p>块级元素（block-level）的布局特性<br>1、独占一行（width默认为100%，height为0）；<br>2、可以设置任何尺寸相关的属性（width、padding、margin和border）；</p>
+<h2 id="行内级元素（inline-level）的布局特性"><a href="#行内级元素（inline-level）的布局特性" class="headerlink" title="行内级元素（inline-level）的布局特性"></a>行内级元素（inline-level）的布局特性</h2><p>行内级元素的布局特性之前，我们先了解一下行内级元素的分类，其可再细分两类元素：<br>1、可置换行内元素<br>按字面翻译，“可置换行内元素”，是展示内容不在CSS作用域内的元素。这句话是不是不好理解？<br>我们可以换另外一种方式理解：“可置换行内元素”，是这样一类元素，其展示的内容是通过元素<br>的src、value等属性或CSS content属性从外部引用得到的，可被替换的。随着内容来源或内容数<br>量的变化，可置换元素本身也会有水平和垂直方向上尺寸的变化。典型的可替换元素有 <img>、</p>
+<p><object>、 <video> 和 <embed>，表单类的可替换元素有<textarea> 和</textarea><input> ，某些元素只<br>在一些特殊情况下表现为可替换元素，例如 <audio> 、<object>、<canvas>和<applet>。<br>2、不可置换行内元素<br>“不可置换行内元素”其实就是我们常见的一类行内元素，这一类行内元素有<a>和<span>等。“不<br>可置换行内元素”是相对于“可置换行内元素”的，其展示的内容是在CSS作用域范围内的，是不可<br>替换的。</span></a></applet></canvas></object></audio></video></object></p>
+<hr>
+<p>言归正传，行内级元素有如下几个布局特性：<br>⑴在一行内可以与多个同类型的元素按从左到右的顺序排列；<br>⑵不可置换行内元素不能设置width、height和垂直方向上的margin，而可置换行内元素则可以；<br>⑶在水平和垂直方向上的对齐方式，行内级元素分别受父元素的text-align属性和自身vertical-<br>align属性的控制（父元素是table-cell元素时，也受父元素的vertical-align属性控制），在水<br>平方向上默认左对齐，在垂直方向上默认在行框的baseline基线上显示。</p>
+<h2 id="行内块级元素（inline-block-level）的布局特性"><a href="#行内块级元素（inline-block-level）的布局特性" class="headerlink" title="行内块级元素（inline-block-level）的布局特性"></a>行内块级元素（inline-block-level）的布局特性</h2><p>排列方式与行内级元素同，不独占一行，在一行内按从左到右的顺序排列；<br>水平和垂直方向上的对齐方式与行内级元素同；<br>和块级元素一样，可以设置任何尺寸属性（但width默认为0）；</p>
+
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="next">
-                <a href= "/2018/04/10/css盒模型/" title= css盒模型 >
-                    <span>Next Post</span>
-                    <span>css盒模型</span>
-                </a>
-            </li>
-        
         
             <li class="previous">
-                <a href= "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" title= Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」 >
+                <a href= "/2018/04/10/css盒模型/" title= css盒模型 >
                     <span>Previous Post</span>
-                    <span>Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</span>
+                    <span>css盒模型</span>
                 </a>
             </li>
         
@@ -293,7 +281,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数组的API"><span class="toc-number">1.</span> <span class="toc-text">数组的API</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#forEach"><span class="toc-number">1.1.</span> <span class="toc-text">forEach</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sort，这个API会改变原值！只有这一个API会改变原值"><span class="toc-number">1.2.</span> <span class="toc-text">sort，这个API会改变原值！只有这一个API会改变原值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#join"><span class="toc-number">1.3.</span> <span class="toc-text">join</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#concat"><span class="toc-number">1.4.</span> <span class="toc-text">concat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#map（映射）"><span class="toc-number">1.5.</span> <span class="toc-text">map（映射）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#filter（过滤器）"><span class="toc-number">1.6.</span> <span class="toc-text">filter（过滤器）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reduce"><span class="toc-number">1.7.</span> <span class="toc-text">reduce</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#map可以用reduce表示："><span class="toc-number">1.8.</span> <span class="toc-text">map可以用reduce表示：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#filter也可以用reduce表示："><span class="toc-number">1.9.</span> <span class="toc-text">filter也可以用reduce表示：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#splice"><span class="toc-number">1.10.</span> <span class="toc-text">splice</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#slice"><span class="toc-number">1.11.</span> <span class="toc-text">slice</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#元素的分类及其布局特性"><span class="toc-number">1.</span> <span class="toc-text">元素的分类及其布局特性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#元素的分类"><span class="toc-number">1.1.</span> <span class="toc-text">元素的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#布局特性"><span class="toc-number">1.2.</span> <span class="toc-text">布局特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#行内级元素（inline-level）的布局特性"><span class="toc-number">1.3.</span> <span class="toc-text">行内级元素（inline-level）的布局特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#行内块级元素（inline-block-level）的布局特性"><span class="toc-number">1.4.</span> <span class="toc-text">行内块级元素（inline-block-level）的布局特性</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>

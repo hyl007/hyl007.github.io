@@ -171,6 +171,52 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/04/11/元素的分类及其布局特性/" >
+                
+                    <span>元素的分类及其布局特性</span>
+            </a>
+            <a class="content-show-full" href = "/2018/04/11/元素的分类及其布局特性/" >
+                <div class="abstract-content">
+                    元素的分类及其布局特性元素的分类从元素的布局特性来分，主要可以分为三类元素：block-level（块级）元素、inline-level（行内级）元素和inline-block-level（行内块级）元素。1、 块级元素display属性取block、table、flex、grid和list-item等值的独占一行显示的元素。2、行内级元素display属性取inline值的可在同一行内排列显示的元素。3、行内块级元素display属性取inline-block、inline-table、inline-flex和inline-grid等值的兼具块级元素和行内级元素布局特性的元素。
+布局特...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/11</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/04/10/css盒模型/" >
+                
+                    <span>css盒模型</span>
+            </a>
+            <a class="content-show-full" href = "/2018/04/10/css盒模型/" >
+                <div class="abstract-content">
+                    CSS标准盒模型一个web页面是由众多html元素拼凑而成的，而每一个html元素，都被解析为一个矩形盒，而CSS盒模型就是这种矩形盒的解构模型。CSS盒模型，它由内到外、被四条边界Content edge、Padding edge、Border edge和Margin edge划分为四个区域：Content area、Padding area、Border area和Margin area，在形状上，Content area（又称content-box）是实心矩形，其余是空心环形（空心部分是Content area）。
+box-sizing的作用box-sizing，顾名思义，其作用与...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/04/10/数组api/" >
                 
                     <span>数组api</span>
@@ -338,53 +384,6 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
             <a class="content-show-full" href = "/2018/04/10/call和apply和bind/" >
                 <div class="abstract-content">
                     简单的介绍call、apply、bind，一般最好与this结合来研究。很多初学者不知道this是什么？应该说是call的第一个参数。当你调用函数用call，就会比较清楚。1、call：call 是函数的正常调用方式，并指定上下文 this。2、apply：apply 的作用和 call 一样，只是在调用的时候，传参数的方式不同。区别是 apply 接受的是数组参数，call 接受的是连续参数。如下代码：12345function add(a,b)&#123;    return a+b;&#125;add.call(add, 5, 3); //8add.apply(add, [5, 3...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/闭包/" >
-                
-                    <span>闭包</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/闭包/" >
-                <div class="abstract-content">
-                    一、什么叫闭包JavaScript有两种作用域：全局作用域和函数作用域。函数内部可以直接读取全局变量。但是，在函数外部无法读取函数内部声明的变量。换言之，如果一个函数，使用了它范围外的变量，那么‘这个函数+这个变量’就叫做闭包。例子：1234567function f1() &#123;  var n = 1;  function f2() &#123;    console.log(n);  &#125;  return f2;&#125;
-函数f1的返回值就是函数f2，由于f2可以读取f1的内部变量，所以就可以在外部获得f1的内部变量了。闭包就是函数f2，即能够读取其他函数内部变量的...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/异步同步与回调/" >
-                
-                    <span>异步同步与回调</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/异步同步与回调/" >
-                <div class="abstract-content">
-                    异步同步异步是不等结果，直接进行下一步操作。我们经常看到的是同步代码，对于同步代码来说等任务执行完了，得到结果，才执行下一个任务。例如下面：123console.log(1)console.log(2)console.log(3)
-输出1 -&gt; 2 -&gt; 3，上面的代码是得到结果，才执行下一个任务。而异步不一样。例如下面：12345console.log(1)setTimeout(function()&#123;  console.log(2)&#125;,0)console.log(3)
-输出结果为1 -&gt; 3 -&gt; 2console.log(2)就是异步，se...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -863,7 +862,59 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
     
-    <div class="total-archive"> Total : 25 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 27 </div>
     
     <div class="post-archive">
     
@@ -875,12 +926,17 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/数组api/" >数组api</a>
+            <span class="archive-post-date">04/11</span><a class="archive-post-title" href= "/2018/04/11/元素的分类及其布局特性/" >元素的分类及其布局特性</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/css盒模型/" >css盒模型</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/数组api/" >数组api</a>
         </li>
     
     
@@ -890,12 +946,12 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/get与post/" >get与post的请求和响应</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/es5模仿一个类/" >es5模仿一个类</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/get与post/" >get与post的请求和响应</a>
         </li>
     
     
@@ -905,12 +961,17 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/JSON与Javascript关系/" >JSON与Javascript关系</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/前端mvc/" >前端mvc</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/JSON与Javascript关系/" >JSON与Javascript关系</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/es5模仿一个类/" >es5模仿一个类</a>
         </li>
     
     
@@ -930,7 +991,7 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/文档流-div高度-脱离文档流/" >文档流-div高度-脱离文档流</a>
         </li>
     
     
@@ -940,12 +1001,12 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/form表单的知识点/" >form表单的知识点</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/文档流-div高度-脱离文档流/" >文档流-div高度-脱离文档流</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/form表单的知识点/" >form表单的知识点</a>
         </li>
     
     
@@ -960,7 +1021,7 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签6/" >HTML标签6</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
         </li>
     
     
@@ -970,7 +1031,7 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签5/" >HTML标签5</a>
+            <span class="archive-post-date">01/28</span><a class="archive-post-title" href= "/2018/01/28/HTML标签6/" >HTML标签6</a>
         </li>
     
     
