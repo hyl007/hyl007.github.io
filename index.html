@@ -171,6 +171,54 @@
     
     
         <article class="index-post">
+            <a class="abstract-title" href = "/2018/04/24/在本地仓库不上传文件到github/" >
+                
+                    <span>在本地仓库不上传文件到github</span>
+            </a>
+            <a class="content-show-full" href = "/2018/04/24/在本地仓库不上传文件到github/" >
+                <div class="abstract-content">
+                    在本地仓库创建一个 .gitignore 文件，在文件里写入不要上传的文件名。比如我是使用工具gitbashtouch .gitignore后编辑，vi .gitignore在里面写入node_modules,node_modules就不会上传了。当然，可以用git status -sb命令查询是否成功了。
+
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/24</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="abstract-title" href = "/2018/04/24/手机错误查询方法/" >
+                
+                    <span>手机错误查询方法</span>
+            </a>
+            <a class="content-show-full" href = "/2018/04/24/手机错误查询方法/" >
+                <div class="abstract-content">
+                    js文件手机错误寻找方法
+1、alert方法在js里打alert来提示到手机页面如果有找不出就在bug页面写下以下代码window.onerror = function(message,file,row){alert(message)alert(file)alert(row)}
+2、找可以在手机console.log的方法我找的是去github下载腾讯的vConsole
+
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/24</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="abstract-title" href = "/2018/04/11/元素的分类及其布局特性/" >
                 
                     <span>元素的分类及其布局特性</span>
@@ -340,50 +388,6 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
                 <div class="abstract-content">
                     JSON 和 JavaScript关系JavaScript是由Brendan Eich发明的语言，有七种数据类型，分别为number，string，boolean，undefined，null，object。JSON是由道格拉斯·克罗克福特发明的一门新语言，全名为JavaScript Object Notation，JSON模仿了JavaScript这门语言，分别有number，boolean，string，null，array，object数据类型，所以说json与JavaScript非常相似。
 区别json模仿JavaScript，但是json与JavaScript有不少区别。Jav...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/前端mvc/" >
-                
-                    <span>前端mvc</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/前端mvc/" >
-                <div class="abstract-content">
-                    1、M是Model，是数据模型，负责对数据的存放。数据模型不必知道视图和控制器的逻辑，当控制器从服务器抓取数据或创建新的记录时，它就将数据包装成模型实例。2、V是View，是视图层，呈现给用户，用户与之交互。视图一般由HTML、CSS、JavaScript组成，视图不应当包含任何其他逻辑，只呈现图层。3、C是Controller，是控制器。控制器是数据模型和视图之间的纽带，控制器从View获取事件和输入，对它们进行处理或者调用Model发送请求到服务器数据库得到数据，并相应地更新在视图上。例子：12345678910111213141516171819202122232425!funct...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/04/10</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/04/10/call和apply和bind/" >
-                
-                    <span>call和apply和bind</span>
-            </a>
-            <a class="content-show-full" href = "/2018/04/10/call和apply和bind/" >
-                <div class="abstract-content">
-                    简单的介绍call、apply、bind，一般最好与this结合来研究。很多初学者不知道this是什么？应该说是call的第一个参数。当你调用函数用call，就会比较清楚。1、call：call 是函数的正常调用方式，并指定上下文 this。2、apply：apply 的作用和 call 一样，只是在调用的时候，传参数的方式不同。区别是 apply 接受的是数组参数，call 接受的是连续参数。如下代码：12345function add(a,b)&#123;    return a+b;&#125;add.call(add, 5, 3); //8add.apply(add, [5, 3...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -902,7 +906,55 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
     
-    <div class="total-archive"> Total : 27 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 29 </div>
     
     <div class="post-archive">
     
@@ -911,6 +963,16 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/24</span><a class="archive-post-title" href= "/2018/04/24/在本地仓库不上传文件到github/" >在本地仓库不上传文件到github</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/24</span><a class="archive-post-title" href= "/2018/04/24/手机错误查询方法/" >手机错误查询方法</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -929,12 +991,12 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cookie-Session-localStroage-SessionStorage/" >Cookie+Session+localStroage+SessionStorage</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/Cache-Control max-age=1000 缓存 与 ETag 的「缓存」/" >Cache-Control max-age=1000 缓存 与 ETag 的「缓存」」</a>
         </li>
     
     
@@ -944,12 +1006,7 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/es5模仿一个类/" >es5模仿一个类</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/call和apply和bind/" >call和apply和bind</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/前端mvc/" >前端mvc</a>
         </li>
     
     
@@ -959,12 +1016,12 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/前端mvc/" >前端mvc</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/call和apply和bind/" >call和apply和bind</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/异步同步与回调/" >异步同步与回调</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/es5模仿一个类/" >es5模仿一个类</a>
         </li>
     
     
@@ -974,12 +1031,17 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/异步同步与回调/" >异步同步与回调</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/清除float浮动/" >清除float浮动</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/form表单的知识点/" >form表单的知识点</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
         </li>
     
     
@@ -994,7 +1056,7 @@ Session1、将sessionID（随机数）通过cookie发给客户端2、客户端�
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/git配置与使用git/" >git配置与使用git</a>
+            <span class="archive-post-date">04/10</span><a class="archive-post-title" href= "/2018/04/10/form表单的知识点/" >form表单的知识点</a>
         </li>
     
     
